@@ -16,7 +16,7 @@ public class Matches {
                 count = count - matches;
                 turn = !turn;
             } else {
-                System.out.println("Ошибка! Введите число от 1 до 3 повторно");
+                System.out.println("Ошибка! Введите число от 1 до 3");
             }
             System.out.println("Осталось " + count);
         }
