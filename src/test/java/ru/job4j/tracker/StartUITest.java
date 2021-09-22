@@ -56,7 +56,6 @@ public class StartUITest {
     @Test
     public void whenFindByIdAction() {
         Output out = new StubOutput();
-        //Item item = new Item();
         Tracker tracker = new Tracker();
         Input in = new StubInput(
              new String[] {"0", "Item name", "2", "1"}
