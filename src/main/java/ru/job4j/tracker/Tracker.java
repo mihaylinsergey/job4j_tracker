@@ -7,10 +7,11 @@ import java.util.List;
 public class Tracker {
 
     private static final List<Item> items = new ArrayList<>();
-
+    private int ids = 1;
 
 
     public Item add(Item item) {
+        item.setId(ids++);
         items.add(item);
 
         return item;
@@ -22,13 +23,13 @@ public class Tracker {
     }
 
     public List<Item> findAll() {
-        return items;
+        return List.copyOf(items);
     }
 
     public List<Item> findByName(String key) {
         List<Item> result = new ArrayList<>();
         for (Item item : items) {
-            if (item.getName().contains(key)) {
+            if (item.getName().equals(key)) {
                 result.add(item);
             }
         }
@@ -37,9 +38,10 @@ public class Tracker {
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (Item item : items) {
-            if (item.getId() == id) {
-                rsl = items.indexOf(item);
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId() == id) {
+                rsl = index;
+                break;
             }
         }
         return rsl;
