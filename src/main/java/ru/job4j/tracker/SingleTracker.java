@@ -5,10 +5,10 @@ import java.util.List;
 public class SingleTracker {
     private static SingleTracker instance = null;
 
-    private SingleTracker () {
-    }
-
     private Tracker tracker = new Tracker();
+
+    private SingleTracker() {
+    }
 
     public static SingleTracker getInstance() {
         if (instance == null) {

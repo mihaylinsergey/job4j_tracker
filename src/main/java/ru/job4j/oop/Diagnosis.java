@@ -6,7 +6,8 @@ public class Diagnosis {
     public Diagnosis() {
         this.diagnosis = diagnosis;
     }
-    public String diag (String rsl){
+
+    public String diag(String rsl) {
         return rsl;
     }
 

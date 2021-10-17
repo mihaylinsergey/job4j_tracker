@@ -22,7 +22,6 @@ public class Student {
         this.group = group;
     }
 
-
     public Date getCreated() {
         return created;
     }

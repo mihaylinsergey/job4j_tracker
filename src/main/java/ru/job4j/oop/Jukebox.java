@@ -11,8 +11,7 @@ public class Jukebox {
             }
         }
 
-
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Jukebox song = new Jukebox();
         int[] numbers = {0, 1, 2, 3};
         for (int number : numbers) {

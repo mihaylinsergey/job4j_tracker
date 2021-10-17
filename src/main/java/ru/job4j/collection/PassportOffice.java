@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class PassportOffice {
 
-    public Map<String, Citizen> citizens = new HashMap<>();
+    private Map<String, Citizen> citizens = new HashMap<>();
 
     public boolean add(Citizen citizen) {
         boolean rsl = false;

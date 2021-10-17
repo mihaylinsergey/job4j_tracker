@@ -8,7 +8,6 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-
 public class StartUITest {
 
     @Test
@@ -19,8 +18,8 @@ public class StartUITest {
         List<UserAction> actions = Arrays.asList(new ExitAction());
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. Exit" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                       + "0. Exit" + System.lineSeparator()
         ));
     }
 

@@ -8,7 +8,7 @@ import java.util.List;
 public class ItemComparator implements Comparator<Item> {
     @Override
     public int compare(Item o1, Item o2) {
-        return Integer.compare(o1.getId(),o2.getId());
+        return Integer.compare(o1.getId(), o2.getId());
     }
 
     public static void main(String[] args) {

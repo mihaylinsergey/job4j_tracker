@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class Builder extends Engineer{
+public class Builder extends Engineer {
     private String structure;
 
     public Builder(String name, String surname, String education,
@@ -9,6 +9,6 @@ public class Builder extends Engineer{
         this.structure = structure;
     }
 
-    public void constructionSite (Adress street) {
+    public void constructionSite(Adress street) {
     }
 }
