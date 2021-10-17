@@ -4,6 +4,10 @@ import java.util.Objects;
 
 public class Account {
 
+    /**
+     * Вносится информация об аккаунте пользователя: реквизиты и баланс
+     */
+
     private String requisite;
     private double balance;
 

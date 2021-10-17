@@ -4,6 +4,10 @@ import java.util.Objects;
 
 public class User {
 
+    /**
+     * Вносится информация о пользователе: номер паспорта и имя
+     */
+
     private String passport;
     private String username;
 

@@ -7,12 +7,26 @@ import java.util.Map;
 
 public class BankService {
 
+    /**
+     * Это поле содержит всех пользователей системы с привязанными к ним счетами
+     */
+
     private final Map<User, List<Account>> users = new HashMap<>();
 
+    /**
+     *
+     * @param user этот метод должен добавить пользователя в систему
+     */
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<Account>());
 
     }
+
+    /**
+     * метод должен добавить новый счет к пользователю
+     * @param passport параметр пользователя
+     * @param account параметр пользователя
+     */
 
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
@@ -21,6 +35,11 @@ public class BankService {
         }
     }
 
+    /**
+     * метод ищет пользователя по номеру паспорта
+     * @param passport параметр пользователя
+     * @return возвращает параметры пользователя
+     */
     public User findByPassport(String passport) {
         User rsl = null;
         for (User el : users.keySet()) {
@@ -32,6 +51,12 @@ public class BankService {
         return rsl;
     }
 
+    /**
+     * метод ищет счет пользователя по реквизитам
+     * @param passport параметр искомого пользователя
+     * @param requisite параметр искомого аккаунта
+     * @return
+     */
     public Account findByRequisite(String passport, String requisite) {
         Account account = null;
         User user = findByPassport(passport);
@@ -46,6 +71,15 @@ public class BankService {
         return account;
     }
 
+    /**
+     * метод предназначен для перечисления денег с одного счёта на другой счёт
+     * @param srcPassport паспорт пользователя, со счета которого осуществляется перевод
+     * @param srcRequisite реквизиты пользователя, со счета которого осуществляется перевод
+     * @param destPassport паспорт пользователя, которому осуществляется перевод
+     * @param destRequisite реквизиты пользователя, которому осуществляется перевод
+     * @param amount сумма перевода
+     * @return возвращает сведения об успешности перевода
+     */
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         boolean rsl = false;
