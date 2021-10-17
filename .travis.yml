@@ -18,3 +18,8 @@ notifications:
       - semi999@mail.ru
     on_success: never # default: change
     on_failure: always # default: always
+    env:
+
+      global:
+
+        - CODECOV_TOKEN="0eeadab8-9de7-4222-b23b-c242970fa863"
