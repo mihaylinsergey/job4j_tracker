@@ -8,16 +8,9 @@ public class Departments {
         Set<String> tmp = new LinkedHashSet<>();
         for (String value : deps) {
             String start = "";
-            boolean first = true;
             for (String el : value.split("/")) {
-                if (first) {
-                    tmp.add(el);
-                    first = false;
-                    start = el;
-                } else {
-                    tmp.add(start + "/" + el);
-                    start = start + "/" + el;
-                }
+                tmp.add(start + el);
+                start += el + "/";
             }
         }
         return new ArrayList<>(tmp);
@@ -28,5 +21,6 @@ public class Departments {
     }
 
     public static void sortDesc(List<String> orgs) {
+        Collections.sort(orgs, new DepDescComp());
     }
 }
