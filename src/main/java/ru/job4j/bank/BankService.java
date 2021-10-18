@@ -14,8 +14,8 @@ public class BankService {
     private final Map<User, List<Account>> users = new HashMap<>();
 
     /**
-     *
-     * @param user этот метод должен добавить пользователя в систему
+     * этот метод должен добавить пользователя в систему
+     * @param user метод принимает объект нового пользователя
      */
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<Account>());
@@ -38,7 +38,7 @@ public class BankService {
     /**
      * метод ищет пользователя по номеру паспорта
      * @param passport параметр пользователя
-     * @return возвращает параметры пользователя
+     * @return возвращает объект -  пользователя
      */
     public User findByPassport(String passport) {
         User rsl = null;
@@ -55,7 +55,7 @@ public class BankService {
      * метод ищет счет пользователя по реквизитам
      * @param passport параметр искомого пользователя
      * @param requisite параметр искомого аккаунта
-     * @return
+     * @return возвращает объект счета пользователя
      */
     public Account findByRequisite(String passport, String requisite) {
         Account account = null;
