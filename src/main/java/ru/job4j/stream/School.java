@@ -15,11 +15,10 @@ public class School {
     }
 
     public Map<String, Student> collectToMap(List<Student> students) {
-        Map<String, Student> rsl = (Map<String, Student>) students.stream()
+        return students.stream()
                 .collect(Collectors.toMap(
                         e -> e.getSurname(),
                         e -> e,
                         (f, s) -> f));
-        return rsl;
     }
 }
