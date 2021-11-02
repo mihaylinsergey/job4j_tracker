@@ -13,11 +13,10 @@ public class NotifyAccountTest {
 
     @Test
     public void sent() {
-        List<Account> accounts = Arrays.asList(new Account("123", "Petr Arsentev", "eDer3432f"),
+        List<Account> accounts = List.of(new Account("123", "Petr Arsentev", "eDer3432f"),
                 new Account("142", "Petr Arsentev", "000001"));
         HashSet<Account> expect = new HashSet<>(
-                Arrays.asList(
-                        new Account("123", "Petr Arsentev", "eDer3432f"),
+                List.of(new Account("123", "Petr Arsentev", "eDer3432f"),
                         new Account("142", "Petr Arsentev", "000001")
                 )
         );
@@ -26,12 +25,11 @@ public class NotifyAccountTest {
 
     @Test
     public void sentDelite() {
-        List<Account> accounts = Arrays.asList(new Account("123", "Petr Arsentev", "eDer3432f"),
+        List<Account> accounts = List.of(new Account("123", "Petr Arsentev", "eDer3432f"),
                 new Account("142", "Petr Arsentev", "000001"),
                 new Account("142", "Petr Arsentev", "000001"));
         HashSet<Account> expect = new HashSet<>(
-                Arrays.asList(
-                        new Account("123", "Petr Arsentev", "eDer3432f"),
+                List.of(new Account("123", "Petr Arsentev", "eDer3432f"),
                         new Account("142", "Petr Arsentev", "000001")
                 )
         );
