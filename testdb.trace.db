@@ -1,0 +1,100 @@
+2022-02-16 18:45:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 18:45:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 18:45:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 18:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 18:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 18:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 18:58:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 18:58:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 18:58:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 18:59:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 18:59:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 18:59:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 19:21:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 19:21:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 19:21:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 19:25:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 19:25:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 19:25:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 19:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 19:34:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+insert into items(name, created) values (?, ?) [42102-200]
+2022-02-16 19:34:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+Select *from items where id = ? [42102-200]
+2022-02-16 19:34:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" не найдена
+Table "ITEMS" not found; SQL statement:
+delete from items [42102-200]
+2022-02-16 19:37:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "DATABASECHANGELOGLOCK" не найдена
+Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM DATABASECHANGELOGLOCK [42102-200]

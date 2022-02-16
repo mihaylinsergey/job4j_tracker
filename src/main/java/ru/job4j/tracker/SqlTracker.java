@@ -11,6 +11,13 @@ public class SqlTracker implements Store, AutoCloseable {
 
     private Connection cn;
 
+    public SqlTracker() {
+    }
+
+    public SqlTracker(Connection cn) {
+        this.cn = cn;
+    }
+
     public void init() throws ClassNotFoundException, SQLException {
         try (InputStream in = SqlTracker.class.getClassLoader()
                 .getResourceAsStream("app.properties")) {
@@ -60,7 +67,6 @@ public class SqlTracker implements Store, AutoCloseable {
             ps.setString(1, item.getName());
             ps.setTimestamp(2, Timestamp.valueOf(item.getCreated()));
             ps.setInt(3, id);
-            ps.execute();
             rsl = ps.executeUpdate() > 0;
         } catch (Exception e) {
             e.printStackTrace();
