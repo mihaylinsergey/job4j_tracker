@@ -10,7 +10,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class ItemComparatorTwoTest {
-
+/*
     @Test
     public void compare() {
         List<Item> items = Arrays.asList(new Item(2, "Two"), new Item(1, "One"),
@@ -20,4 +20,6 @@ public class ItemComparatorTwoTest {
                 new Item(1, "One"));
         assertThat(items, is(expect));
     }
+
+ */
 }
