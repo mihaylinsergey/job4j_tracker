@@ -1,16 +1,20 @@
 package ru.job4j.tracker;
 
+import jakarta.persistence.*;
 import lombok.Data;
-
+import org.hibernate.annotations.Entity;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects;
 
+@Entity
+@Table(name = "items")
 @Data
 public class Item {
     private static final DateTimeFormatter FORMATTER =
             DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
