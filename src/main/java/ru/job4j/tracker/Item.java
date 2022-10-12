@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.Entity;
 import java.time.LocalDateTime;
