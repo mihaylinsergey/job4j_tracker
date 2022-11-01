@@ -24,8 +24,9 @@ public class HbmTracker implements Store, AutoCloseable {
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
+        } finally {
+            session.close();
         }
-        session.close();
         return item;
     }
 
@@ -40,8 +41,9 @@ public class HbmTracker implements Store, AutoCloseable {
             rsl = true;
         } catch (Exception e) {
             session.getTransaction().rollback();
+        } finally {
+            session.close();
         }
-        session.close();
         return  rsl;
     }
 
@@ -59,8 +61,9 @@ public class HbmTracker implements Store, AutoCloseable {
             rsl = false;
         } catch (Exception e) {
             session.getTransaction().rollback();
+        } finally {
+            session.close();
         }
-        session.close();
         return rsl;
     }
 
@@ -74,8 +77,9 @@ public class HbmTracker implements Store, AutoCloseable {
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
+        } finally {
+            session.close();
         }
-        session.close();
         return result;
     }
 
@@ -86,12 +90,15 @@ public class HbmTracker implements Store, AutoCloseable {
         try {
             session.beginTransaction();
             result = session.createQuery(
-                    "from Item as i where i.name like %" + key + "%", Item.class).list();
+                    "from Item where name = :fName")
+                    .setParameter("fName", key)
+                    .list();
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
+        } finally {
+            session.close();
         }
-        session.close();
         return result;
     }
 
@@ -105,8 +112,9 @@ public class HbmTracker implements Store, AutoCloseable {
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
+        } finally {
+            session.close();
         }
-        session.close();
         return result;
     }
 
