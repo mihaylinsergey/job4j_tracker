@@ -1,10 +1,12 @@
 package ru.job4j.tracker;
 
-import javax.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.Entity;
+import javax.persistence.*;
+import ru.job4j.toone.User;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "items")
@@ -16,10 +18,16 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String name;
-
     private LocalDateTime created = LocalDateTime.now();
+
+    @ManyToMany
+    @JoinTable(
+            name = "participates",
+            joinColumns = { @JoinColumn(name = "item_id") },
+            inverseJoinColumns = { @JoinColumn(name = "user_id") }
+    )
+    private List<User> participates = new ArrayList<>();
 
     public Item() {
     }
@@ -37,5 +45,12 @@ public class Item {
         this.id = id;
         this.name = name;
         this.created = created;
+    }
+
+    public Item(int id, String name, LocalDateTime created, List<User> participates) {
+        this.id = id;
+        this.name = name;
+        this.created = created;
+        this.participates = participates;
     }
 }

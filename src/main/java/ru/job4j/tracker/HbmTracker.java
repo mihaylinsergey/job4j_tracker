@@ -27,6 +27,7 @@ public class HbmTracker implements Store, AutoCloseable {
         } finally {
             session.close();
         }
+        System.out.println("SAVE" + item);
         return item;
     }
 
@@ -75,7 +76,11 @@ public class HbmTracker implements Store, AutoCloseable {
             session.beginTransaction();
             result = session.createQuery("from Item ORDER BY id").list();
             session.getTransaction().commit();
+            for (Item i : result) {
+                System.out.println("!!!!!!!!!!!!!" + i);
+            }
         } catch (Exception e) {
+            System.out.println(e);
             session.getTransaction().rollback();
         } finally {
             session.close();
@@ -90,7 +95,7 @@ public class HbmTracker implements Store, AutoCloseable {
         try {
             session.beginTransaction();
             result = session.createQuery(
-                    "from Item where name = :fName")
+                    "from Item as i JOIN FETCH i.participates where i.name = :fName")
                     .setParameter("fName", key)
                     .list();
             session.getTransaction().commit();
